@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Horto Ville III | Santo Antônio de Jesus - BA | Klebson Souza CRECI-BA 37964</title>
+<meta name="description" content="Lançamento do Horto Ville III em Santo Antônio de Jesus (BA) nos dias 26 e 27 de novembro, exclusivo para cadastrados. Lotes de 160 m² e 63% de área verde.">
+<meta name="theme-color" content="#17261d">
+<meta property="og:title" content="Horto Ville III | Santo Antônio de Jesus - BA">
+<meta property="og:description" content="Lançamento exclusivo nos dias 26 e 27 de novembro. Cadastre-se.">
+<meta property="og:image" content="hv3-aerea.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<!-- META PIXEL (opcional): cole aqui o código do seu Pixel do Facebook -->
+
+<style>
+  :root {
+    --bg: #f5f3ee;
+    --card: #ffffff;
+    --ink: #17261d;
+    --green: #1f4a31;
+    --lime: #7aa62b;
+    --muted: #5b6a60;
+    --line: rgba(23,38,29,.12);
+    --wa: #25d366;
+    --font: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); background: var(--bg); color: var(--ink); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; }
+  :focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 52px 0; }
+  .eyebrow { font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--lime); }
+  h2 { font-size: clamp(26px, 6vw, 36px); line-height: 1.12; font-weight: 800; letter-spacing: -0.02em; margin-top: 8px; }
+  .lead { color: var(--muted); font-size: 17px; margin-top: 10px; max-width: 56ch; }
+
+  /* HERO */
+  .hero { position: relative; min-height: 78svh; display: flex; align-items: flex-end; color: #fff; background: #17261d; overflow: hidden; padding: 0; }
+  .hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 48% center; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(23,38,29,.35) 0%, rgba(23,38,29,.15) 35%, rgba(23,38,29,.88) 100%); }
+  .hero .wrap { position: relative; z-index: 1; padding-bottom: 40px; padding-top: 80px; }
+  .hero h1 { font-size: clamp(42px, 12vw, 80px); line-height: .98; font-weight: 800; letter-spacing: -0.03em; margin-top: 10px; }
+  .hero p { font-size: 18px; margin-top: 12px; max-width: 34ch; color: rgba(255,255,255,.9); }
+  .hero .eyebrow { color: #cfe79a; }
+
+  .btn { display: inline-flex; align-items: center; gap: 14px; background: var(--wa); color: #05260f; text-decoration: none; padding: 16px 22px; border-radius: 16px; box-shadow: 0 10px 24px rgba(37,211,102,.28); transition: transform .15s ease, background .15s ease; }
+  .btn:hover { background: #3be37b; }
+  .btn:active { transform: scale(.985); }
+  .btn svg { width: 32px; height: 32px; flex: none; }
+  .btn .txt { display: flex; flex-direction: column; text-align: left; }
+  .btn .main { font-size: 17px; font-weight: 800; line-height: 1.15; }
+  .btn .sub { font-size: 13px; font-weight: 600; opacity: .8; margin-top: 3px; }
+  .hero .btn { margin-top: 26px; }
+  .pill { display: inline-block; background: var(--lime); color: #17261d; font-weight: 800; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; padding: 8px 14px; border-radius: 999px; }
+
+  /* LANÇAMENTO */
+  .launch { background: var(--ink); color: #fff; padding: 44px 0; }
+  .launch .wrap { display: grid; gap: 22px; }
+  .launch h2 { color: #fff; }
+  .launch .lead { color: #b9c6bd; }
+  .launch .dates { display: flex; gap: 12px; margin-top: 4px; }
+  .launch .date { flex: 1; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); border-radius: 16px; padding: 14px 16px; text-align: center; }
+  .launch .date b { display: block; font-size: 40px; font-weight: 800; line-height: 1; color: #cfe79a; }
+  .launch .date span { display: block; font-size: 13px; color: #b9c6bd; margin-top: 6px; text-transform: uppercase; letter-spacing: .08em; }
+  .count { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .count div { background: #fff; color: var(--ink); border-radius: 14px; padding: 14px 8px; text-align: center; }
+  .count b { display: block; font-size: 32px; font-weight: 800; line-height: 1; color: var(--green); font-variant-numeric: tabular-nums; }
+  .count span { display: block; font-size: 12px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: .08em; }
+  .count-note { font-size: 14px; color: #b9c6bd; }
+  .launch .btn { justify-self: start; }
+  @media (min-width: 760px) { .launch .wrap { grid-template-columns: 1.1fr 1fr; column-gap: 48px; align-items: center; } .launch .full { grid-column: 1 / -1; } }
+
+  /* NÚMEROS */
+  .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 28px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 20px 18px; }
+  .stat b { display: block; font-size: 34px; font-weight: 800; letter-spacing: -0.02em; color: var(--green); line-height: 1; }
+  .stat span { display: block; font-size: 14px; color: var(--muted); margin-top: 8px; }
+
+  /* DIFERENCIAIS */
+  .features { list-style: none; margin-top: 26px; display: grid; gap: 0; border-top: 2px solid var(--ink); }
+  .features li { padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 17px; font-weight: 600; display: flex; gap: 12px; align-items: baseline; }
+  .features li::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--lime); transform: translateY(-1px); }
+
+  /* GALERIA */
+  .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 26px; }
+  .gallery figure { border-radius: 16px; overflow: hidden; aspect-ratio: 4 / 5; background: #d9d6cd; }
+  .gallery img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* VÍDEO */
+  .video-sec { background: var(--ink); color: #fff; }
+  .video-sec .lead { color: #b9c6bd; }
+  .video-box { margin: 26px auto 0; border-radius: 22px; overflow: hidden; background: #000; aspect-ratio: 9 / 16; max-width: 340px; border: 6px solid #2b3b31; }
+  .video-box video, .video-box iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .link-btn { display: inline-block; margin-top: 18px; color: #fff; font-weight: 700; text-decoration: none; border: 1.5px solid rgba(255,255,255,.4); padding: 12px 18px; border-radius: 12px; }
+
+  /* IMPLANTAÇÃO */
+  .plan { margin-top: 26px; background: #000; border-radius: 18px; overflow: hidden; border: 0; padding: 0; width: 100%; cursor: zoom-in; position: relative; display: block; }
+  .plan img { width: 100%; height: auto; }
+  .plan span { position: absolute; right: 12px; bottom: 12px; background: rgba(255,255,255,.92); color: var(--ink); font: 700 13px var(--font); padding: 8px 12px; border-radius: 999px; }
+  .lightbox { position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,.94); display: none; overflow: auto; -webkit-overflow-scrolling: touch; }
+  .lightbox.open { display: block; }
+  .lightbox img { width: 220%; max-width: none; height: auto; margin: 56px 0 24px; }
+  .lightbox button { position: fixed; top: calc(10px + env(safe-area-inset-top, 0px)); right: 12px; z-index: 51; background: #fff; border: 0; border-radius: 999px; padding: 10px 16px; font: 800 14px var(--font); cursor: pointer; }
+  @media (min-width: 760px) { .lightbox img { width: 140%; } }
+
+  /* CONDIÇÕES */
+  .cond { display: grid; gap: 12px; margin-top: 26px; }
+  .cond .row { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; display: flex; justify-content: space-between; align-items: baseline; gap: 14px; }
+  .cond .row span { color: var(--muted); font-size: 15px; }
+  .cond .row b { font-size: 22px; font-weight: 800; color: var(--green); text-align: right; letter-spacing: -0.01em; }
+  .note { font-size: 13px; color: var(--muted); margin-top: 14px; }
+
+  /* CORRETOR / CTA */
+  .final { background: var(--green); color: #fff; }
+  .final h2 { color: #fff; }
+  .broker { display: flex; align-items: center; gap: 14px; margin-top: 26px; }
+  .broker img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,.35); }
+  .broker strong { display: block; font-size: 18px; font-weight: 800; }
+  .broker span { display: block; font-size: 14px; color: #cfdcd3; }
+  .broker .creci { display: inline-flex; gap: 6px; align-items: center; font-weight: 700; color: #fff; margin-top: 3px; }
+  .broker .creci svg { width: 16px; height: 16px; color: #cfe79a; }
+  .final .btn { margin-top: 26px; }
+
+  footer { background: var(--ink); color: #aebbb2; font-size: 12.5px; padding: 26px 0 calc(110px + env(safe-area-inset-bottom, 0px)); }
+  footer p + p { margin-top: 8px; }
+
+  /* BOTÃO WHATSAPP SEMPRE VISÍVEL */
+  .sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px)); background: rgba(245,243,238,.96); backdrop-filter: blur(8px); border-top: 1px solid var(--line); }
+  .sticky .btn { display: flex; justify-content: center; padding: 14px 18px; width: 100%; }
+
+  /* DESTAQUE 20% */
+  .highlight { margin-top: 26px; background: var(--green); color: #fff; border-radius: 20px; padding: 26px 22px; display: grid; gap: 6px; }
+  .highlight .tag { font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #cfe79a; }
+  .highlight .big { font-size: clamp(44px, 13vw, 64px); font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+  .highlight p { color: #d8e5dc; font-size: 15.5px; max-width: 46ch; }
+
+  .checks { list-style: none; margin-top: 22px; display: grid; gap: 10px; }
+  .checks li { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px 14px 44px; position: relative; font-size: 15.5px; }
+  .checks li::before { content: ""; position: absolute; left: 16px; top: 18px; width: 14px; height: 8px; border-left: 3px solid var(--lime); border-bottom: 3px solid var(--lime); transform: rotate(-45deg); }
+  .checks b { font-weight: 800; }
+
+  /* PASSO A PASSO */
+  .steps { list-style: none; margin-top: 28px; position: relative; display: grid; gap: 0; counter-reset: st; }
+  .steps li { position: relative; padding: 0 0 28px 62px; counter-increment: st; }
+  .steps li:last-child { padding-bottom: 0; }
+  .steps li::before { content: counter(st); position: absolute; left: 0; top: 0; width: 44px; height: 44px; border-radius: 50%; background: var(--green); color: #fff; font-weight: 800; font-size: 18px; display: grid; place-items: center; }
+  .steps li:not(:last-child)::after { content: ""; position: absolute; left: 21px; top: 48px; bottom: 4px; width: 2px; background: var(--line); }
+  .steps h3 { font-size: 19px; font-weight: 800; letter-spacing: -0.01em; margin-top: 8px; }
+  .steps p { color: var(--muted); font-size: 15.5px; margin-top: 4px; }
+  .steps .hot h3 { color: var(--green); }
+  .steps .hot::before { background: var(--lime); color: #17261d; }
+
+  /* FAQ */
+  .faq { margin-top: 26px; display: grid; gap: 10px; }
+  .faq details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+  .faq summary { list-style: none; cursor: pointer; padding: 18px 52px 18px 20px; font-weight: 800; font-size: 16.5px; line-height: 1.3; position: relative; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 26px; font-weight: 500; color: var(--green); }
+  .faq details[open] summary::after { content: "\2212"; }
+  .faq .ans { padding: 0 20px 20px; color: var(--muted); font-size: 15.5px; }
+  .faq .ans p + p { margin-top: 8px; }
+
+  @media (min-width: 760px) {
+    section { padding: 72px 0; }
+    .stats { grid-template-columns: repeat(4, 1fr); }
+    .features { grid-template-columns: 1fr 1fr; column-gap: 40px; }
+    .gallery { grid-template-columns: repeat(4, 1fr); }
+    .cond { grid-template-columns: repeat(2, 1fr); }
+    .hero { min-height: 82vh; }
+    .sticky { left: auto; right: 24px; bottom: 24px; width: auto; padding: 0; background: none; border: 0; backdrop-filter: none; }
+    .sticky .btn { width: auto; padding: 14px 22px; box-shadow: 0 12px 30px rgba(0,0,0,.28); }
+    .highlight { grid-template-columns: auto 1fr; align-items: center; column-gap: 32px; padding: 30px 34px; }
+    .highlight .tag { grid-column: 1 / -1; }
+    .checks { grid-template-columns: 1fr 1fr; }
+    footer { padding-bottom: 110px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img src="hv3-aerea.jpg" alt="Vista aérea do loteamento Horto Ville III" fetchpriority="high">
+  <div class="wrap">
+    <span class="pill">Lançamento · 26 e 27 de novembro</span>
+    <p class="eyebrow" style="margin-top:14px">Santo Antônio de Jesus · BA</p>
+    <h1>Horto Ville III</h1>
+    <p>Lançamento exclusivo nos dias 26 e 27 de novembro, para quem estiver cadastrado.</p>
+    <a class="btn" data-cta href="#">
+      <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.19 1.6 6.01L4 28l7.14-1.87a12 12 0 0 0 4.9 1.04h.01C22.68 27.17 28 21.77 28 15.13 28 11.92 26.75 8.9 24.5 6.64A11.9 11.9 0 0 0 16.04 3Zm0 21.98h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.73.98 1-3.63-.24-.37a9.9 9.9 0 0 1-1.52-5.33c0-5.5 4.47-9.97 9.97-9.97 2.66 0 5.17 1.04 7.05 2.92a9.9 9.9 0 0 1 2.92 7.06c0 5.5-4.48 9.93-9.94 9.93Zm5.47-7.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
+      <span class="txt"><span class="main">Quero me cadastrar para o lançamento</span><span class="sub">Exclusivo para cadastrados · 26 e 27 de novembro</span></span>
+    </a>
+  </div>
+</header>
+
+<section class="launch" id="lancamento">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" style="color:#cfe79a">Lançamento exclusivo</p>
+      <h2>Acesso somente para quem está cadastrado</h2>
+      <p class="lead">O lançamento do Horto Ville III acontece nos dias 26 e 27 de novembro. Garanta o seu cadastro com antecedência para participar.</p>
+    </div>
+    <div>
+      <div class="dates">
+        <div class="date"><b>26</b><span>Novembro</span></div>
+        <div class="date"><b>27</b><span>Novembro</span></div>
+      </div>
+      <div class="count" id="count" style="margin-top:14px" aria-live="off">
+        <div><b id="cd-d">--</b><span>dias</span></div>
+        <div><b id="cd-h">--</b><span>horas</span></div>
+        <div><b id="cd-m">--</b><span>minutos</span></div>
+      </div>
+      <p class="count-note" id="countNote" style="margin-top:10px"></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">O empreendimento</p>
+    <h2>Planejado para viver com mais tranquilidade</h2>
+    <p class="lead">O Horto Ville III chega a Santo Antônio de Jesus como uma oportunidade para quem deseja construir a própria casa, conquistar seu espaço ou investir em um terreno com infraestrutura planejada e qualidade de vida. Com ampla área verde, espaços de lazer e condições facilitadas de pagamento, foi pensado para oferecer conforto e tranquilidade à sua família.</p>
+    <div class="stats">
+      <div class="stat"><b>467</b><span>lotes: 465 residenciais e 2 comerciais</span></div>
+      <div class="stat"><b>160 m²</b><span>por lote (8 x 20 m)</span></div>
+      <div class="stat"><b>63%</b><span>de área verde</span></div>
+      <div class="stat"><b>90%</b><span>dos lotes com orientação Norte/Sul</span></div>
+    </div>
+    <ul class="features">
+      <li>Empreendimento murado, com estrutura de condomínio</li>
+      <li>Portal de acesso</li>
+      <li>Ruas asfaltadas</li>
+      <li>Rede de energia elétrica</li>
+      <li>Rede de esgoto</li>
+      <li>Abastecimento de água potável</li>
+      <li>Parque infantil</li>
+      <li>Praça pet</li>
+      <li>Quadra de esportes</li>
+      <li>Áreas verdes e espaços de convivência</li>
+    </ul>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Por que conhecer</p>
+    <h2>Mais do que um terreno</h2>
+    <p class="lead">Comprar um terreno pode ser o primeiro passo para construir a casa própria, dar mais qualidade de vida à família ou fazer um investimento pensando no futuro.</p>
+    <ul class="checks">
+      <li><b>Espaço para construir</b> do jeito que você planejou.</li>
+      <li><b>Contato com a natureza</b>, com 63% de área verde.</li>
+      <li><b>Infraestrutura planejada</b> para o dia a dia.</li>
+      <li><b>Espaços de lazer</b> para toda a família.</li>
+      <li><b>Diferentes possibilidades</b> de pagamento.</li>
+    </ul>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Conheça os espaços</p>
+    <h2>Estrutura de lazer</h2>
+    <div class="gallery">
+      <figure><img src="hv3-entrada.jpg" alt="Portal de entrada do Horto Ville III" loading="lazy"></figure>
+      <figure><img src="hv3-playground.jpg" alt="Parque infantil do Horto Ville III" loading="lazy"></figure>
+      <figure><img src="hv3-pets.jpg" alt="Praça pet do Horto Ville III" loading="lazy"></figure>
+      <figure><img src="hv3-esporte.jpg" alt="Quadra de esportes do Horto Ville III" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="video-sec" id="localizacao">
+  <div class="wrap">
+    <p class="eyebrow">Localização</p>
+    <h2>Veja como chegar</h2>
+    <p class="lead">Acompanhe, em um sobrevoo, a localização e o trajeto até o Horto Ville III, em Santo Antônio de Jesus.</p>
+    <div class="video-box" id="videoBox"></div>
+    <a class="link-btn" id="mapsBtn" href="#" hidden target="_blank" rel="noopener">Abrir no Google Maps</a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Implantação</p>
+    <h2>Conheça a planta do loteamento</h2>
+    <p class="lead">Toque na imagem para ampliar e ver quadras e lotes.</p>
+    <button class="plan" id="planBtn" type="button" aria-label="Ampliar a planta do loteamento">
+      <img src="hv3-implantacao.jpg" alt="Planta de implantação do Horto Ville III com quadras e lotes" loading="lazy">
+      <span>Ampliar</span>
+    </button>
+  </div>
+</section>
+
+<section style="padding-top:0" id="condicoes">
+  <div class="wrap">
+    <p class="eyebrow">Condições especiais de pagamento</p>
+    <h2>Valores a partir de</h2>
+    <div class="cond">
+      <div class="row"><span>Lotes a partir de</span><b>R$ 91.329,00</b></div>
+      <div class="row"><span>Entrada mínima de 6%</span><b>R$ 5.469,00</b></div>
+      <div class="row"><span>Parcelas a partir de</span><b>R$ 477,00</b></div>
+      <div class="row"><span>Parcelas de R$ 600,00 em</span><b>85% dos lotes</b></div>
+      <div class="row"><span>Reajuste das parcelas</span><b>Anual, pelo IPCA</b></div>
+    </div>
+
+    <div class="highlight">
+      <span class="tag">Pagamento à vista</span>
+      <span class="big">20% de desconto</span>
+      <p>Desconto sobre o valor do lote para pagamento à vista, conforme tabela e regras comerciais vigentes.</p>
+    </div>
+
+    <ul class="checks">
+      <li><b>Sem juros remuneratórios</b> no parcelamento.</li>
+      <li><b>Correção anual pelo IPCA</b>, índice que atualiza os valores ao longo do tempo.</li>
+      <li><b>Antecipação de parcelas</b> para amortizar o saldo devedor.</li>
+    </ul>
+    <p class="note">Valores iniciais, sujeitos à tabela vigente. A disponibilidade dos lotes é confirmada no momento do atendimento.</p>
+  </div>
+</section>
+
+<section style="padding-top:0" id="como-funciona">
+  <div class="wrap">
+    <p class="eyebrow">Do pagamento à construção</p>
+    <h2>Como funciona, passo a passo</h2>
+    <p class="lead">Veja o caminho entre a compra do lote e o início da sua obra.</p>
+    <ol class="steps">
+      <li>
+        <h3>Entrada a partir de 6%</h3>
+        <p>Você reserva o seu lote com entrada mínima de 6% do valor, aproximadamente R$ 5.469,00 no lote de valor inicial.</p>
+      </li>
+      <li>
+        <h3>Parcelas sem juros remuneratórios</h3>
+        <p>Parcelas a partir de R$ 477,00, com reajuste anual pelo IPCA. Você pode antecipar parcelas para reduzir o prazo e o saldo devedor.</p>
+      </li>
+      <li class="hot">
+        <h3>40% pagos: Habite-se e início da obra</h3>
+        <p>Ao atingir 40% do valor do lote em pagamentos, incluindo a entrada, é emitido o Habite-se e você pode começar a construir, conforme as condições documentais e contratuais do empreendimento.</p>
+      </li>
+      <li class="hot">
+        <h3>Financie o terreno e a construção</h3>
+        <p>Com o Habite-se emitido e a documentação apta, é possível avaliar na Caixa Econômica Federal a modalidade de aquisição de terreno e construção. A aprovação depende da análise de crédito e dos critérios da instituição financeira.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section style="padding-top:0" id="duvidas">
+  <div class="wrap">
+    <p class="eyebrow">Dúvidas frequentes</p>
+    <h2>Tire suas dúvidas</h2>
+    <div class="faq">
+      <details open>
+        <summary>Como participo do lançamento?</summary>
+        <div class="ans"><p>O lançamento do Horto Ville III acontece nos dias 26 e 27 de novembro e é exclusivo para quem estiver cadastrado.</p><p>Para garantir a sua participação, faça o cadastro pelo botão do WhatsApp, diretamente com o corretor Klebson Souza.</p></div>
+      </details>
+      <details>
+        <summary>Posso amortizar ou antecipar as parcelas?</summary>
+        <div class="ans"><p>Sim. Você pode antecipar o pagamento das parcelas começando pelas últimas, ou seja, do final para o início.</p><p>Isso permite reduzir o prazo de pagamento e quitar o seu lote mais rapidamente.</p></div>
+      </details>
+      <details>
+        <summary>Quando posso começar a construir?</summary>
+        <div class="ans"><p>Ao atingir o pagamento acumulado de 40% do valor do lote, incluindo a entrada nesse percentual, é emitido o Habite-se e você pode começar a construir, conforme as condições documentais e contratuais do empreendimento.</p><p>Você também poderá avaliar a possibilidade de financiar a construção pelo banco.</p></div>
+      </details>
+      <details>
+        <summary>Existem juros no parcelamento?</summary>
+        <div class="ans"><p>Não há juros remuneratórios no parcelamento. Existe apenas a correção anual pelo IPCA, que atualiza o valor das parcelas conforme a inflação.</p></div>
+      </details>
+      <details>
+        <summary>O que é o IPCA?</summary>
+        <div class="ans"><p>É um índice de correção monetária, utilizado para atualizar os valores ao longo do tempo. No Horto Ville III, as parcelas são reajustadas uma vez por ano por esse índice, conforme as condições contratuais.</p></div>
+      </details>
+      <details>
+        <summary>Como funciona o desconto de 20% à vista?</summary>
+        <div class="ans"><p>Para pagamento à vista, o desconto é de 20% sobre o valor do lote, conforme tabela e regras comerciais vigentes da incorporadora.</p></div>
+      </details>
+      <details>
+        <summary>Posso financiar pela Caixa Econômica Federal?</summary>
+        <div class="ans"><p>Existe a possibilidade de utilizar a modalidade de aquisição de terreno e construção pela Caixa. Após a emissão do Habite-se e estando a documentação apta, você poderá procurar o banco para fazer a análise e verificar as condições de financiamento.</p><p>O financiamento depende de aprovação de crédito e dos critérios da instituição financeira.</p></div>
+      </details>
+      <details>
+        <summary>Qual é o prazo de entrega do empreendimento?</summary>
+        <div class="ans"><p>O prazo informado pela incorporadora é de 36 meses para a entrega do empreendimento, observadas as condições e o cronograma contratual.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="contato">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#cfe79a">Cadastro para o lançamento</p>
+    <h2>Seu futuro começa com uma boa escolha</h2>
+    <p class="lead" style="color:#d8e5dc">O lançamento do Horto Ville III acontece nos dias 26 e 27 de novembro, exclusivo para quem estiver cadastrado. Faça o seu cadastro agora com o corretor responsável.</p>
+    <div class="broker">
+      <img src="hv3-klebson.jpg" alt="Klebson Souza" width="64" height="64">
+      <div>
+        <strong>Klebson Souza</strong>
+        <span>Corretor de Imóveis</span>
+        <span class="creci"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 1.7 2.9-.2 1.2 2.7 2.5 1.5-.5 2.9 1.3 2.6-1.8 2.3-.2 2.9-2.8.9-1.8 2.3L12 20.6 9.1 22l-1.8-2.3-2.8-.9-.2-2.9L2.5 13.6l1.3-2.6-.5-2.9 2.5-1.5 1.2-2.7 2.9.2L12 2Zm-1.2 13.6 5.6-5.6-1.4-1.4-4.2 4.2-1.8-1.8-1.4 1.4 3.2 3.2Z"/></svg> CRECI-BA 37964</span>
+      </div>
+    </div>
+    <a class="btn" data-cta href="#">
+      <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.19 1.6 6.01L4 28l7.14-1.87a12 12 0 0 0 4.9 1.04h.01C22.68 27.17 28 21.77 28 15.13 28 11.92 26.75 8.9 24.5 6.64A11.9 11.9 0 0 0 16.04 3Zm0 21.98h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.73.98 1-3.63-.24-.37a9.9 9.9 0 0 1-1.52-5.33c0-5.5 4.47-9.97 9.97-9.97 2.66 0 5.17 1.04 7.05 2.92a9.9 9.9 0 0 1 2.92 7.06c0 5.5-4.48 9.93-9.94 9.93Zm5.47-7.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
+      <span class="txt"><span class="main">Quero me cadastrar para o lançamento</span><span class="sub">Cadastro rápido pelo WhatsApp</span></span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Klebson Souza · Corretor de Imóveis · CRECI-BA 37964</p>
+    <p><b>Informações e observações comerciais:</b> valores apresentados são iniciais e sujeitos à tabela vigente; a disponibilidade dos lotes deve ser confirmada no momento do atendimento; o desconto de 20% à vista observa as regras comerciais da incorporadora; o reajuste pelo IPCA segue as condições contratuais; a emissão do Habite-se, a autorização para construir e a possibilidade de financiamento dependem do cumprimento dos requisitos aplicáveis, e o financiamento está sujeito à aprovação de crédito; o prazo de entrega deve ser conferido no contrato e no cronograma oficial.</p>
+    <p>Imagens ilustrativas. Este material não substitui contrato, memorial descritivo ou tabela oficial.</p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <a class="btn" data-cta href="#">
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.19 1.6 6.01L4 28l7.14-1.87a12 12 0 0 0 4.9 1.04h.01C22.68 27.17 28 21.77 28 15.13 28 11.92 26.75 8.9 24.5 6.64A11.9 11.9 0 0 0 16.04 3Zm0 21.98h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.73.98 1-3.63-.24-.37a9.9 9.9 0 0 1-1.52-5.33c0-5.5 4.47-9.97 9.97-9.97 2.66 0 5.17 1.04 7.05 2.92a9.9 9.9 0 0 1 2.92 7.06c0 5.5-4.48 9.93-9.94 9.93Zm5.47-7.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
+    <span class="txt"><span class="main">Cadastrar para o lançamento</span></span>
+  </a>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Planta ampliada">
+  <button type="button" id="lbClose">Fechar</button>
+  <img src="hv3-implantacao.jpg" alt="Planta de implantação ampliada">
+</div>
+
+<script>
+  // ====== EDITE AQUI ======
+  var WHATSAPP = "5575982193793";
+  var MENSAGEM = "Olá, Klebson! Quero me cadastrar para o lançamento do Horto Ville III (26 e 27 de novembro).";
+
+  // Vídeo de localização e trajeto: preencha UM dos dois.
+  var VIDEO_MP4 = "hv3-trajeto.mp4";   // vídeo do trajeto (arquivo enviado junto com o site)
+  var VIDEO_YOUTUBE = "";    // ex.: "dQw4w9WgXcQ" (somente o código do vídeo)
+  var MAPS_URL = "";         // link do Google Maps do empreendimento (opcional)
+  // ========================
+
+  // Botões do WhatsApp
+  var url = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MENSAGEM);
+  document.querySelectorAll("[data-cta]").forEach(function (a) {
+    a.href = url; a.target = "_blank"; a.rel = "noopener";
+    a.addEventListener("click", function () { if (window.fbq) { fbq("track", "Contact"); } });
+  });
+
+  // Vídeo (a seção só aparece se houver vídeo)
+  var sec = document.getElementById("localizacao"), box = document.getElementById("videoBox");
+  if (VIDEO_MP4) {
+    box.innerHTML = '<video controls playsinline preload="metadata" poster="hv3-trajeto-capa.jpg" src="' + VIDEO_MP4 + '"></video>';
+    sec.hidden = false;
+  } else if (VIDEO_YOUTUBE) {
+    box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + VIDEO_YOUTUBE + '?rel=0" title="Localização e trajeto até o Horto Ville III" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>';
+    sec.hidden = false;
+  }
+  if (MAPS_URL && !sec.hidden) { var m = document.getElementById("mapsBtn"); m.href = MAPS_URL; m.hidden = false; }
+
+  // Planta ampliada
+  var lb = document.getElementById("lightbox");
+  document.getElementById("planBtn").addEventListener("click", function () { lb.classList.add("open"); lb.scrollTop = 0; });
+  function closeLb() { lb.classList.remove("open"); }
+  document.getElementById("lbClose").addEventListener("click", closeLb);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
+
+
+  // Contagem regressiva do lançamento (26 e 27 de novembro de 2026, horário da Bahia)
+  (function () {
+    var start = new Date("2026-11-26T00:00:00-03:00").getTime();
+    var end = new Date("2026-11-27T23:59:59-03:00").getTime();
+    var d = document.getElementById("cd-d"), h = document.getElementById("cd-h"), m = document.getElementById("cd-m");
+    var box = document.getElementById("count"), note = document.getElementById("countNote");
+    function pad(n) { return n < 10 ? "0" + n : "" + n; }
+    function tick() {
+      var now = Date.now();
+      if (now >= start && now <= end) { box.style.display = "none"; note.textContent = "O lançamento está acontecendo agora."; return; }
+      if (now > end) { box.style.display = "none"; note.textContent = ""; return; }
+      var diff = Math.floor((start - now) / 1000);
+      d.textContent = Math.floor(diff / 86400);
+      h.textContent = pad(Math.floor(diff % 86400 / 3600));
+      m.textContent = pad(Math.floor(diff % 3600 / 60));
+      note.textContent = "Faltam poucos dias. Cadastre-se para não ficar de fora.";
+    }
+    tick(); setInterval(tick, 30000);
+  })();
+</script>
+</body>
+</html>
