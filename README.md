@@ -8,7 +8,7 @@ Página de apresentação do empreendimento, com fotos sem textos, planta de imp
 
 ## Vídeo de localização e trajeto
 
-O vídeo `hv3-trajeto.mp4` (sobrevoo vertical, cerca de 20 MB) já está ligado à página. Para trocar, substitua o arquivo mantendo o mesmo nome ou altere `VIDEO_MP4` / `VIDEO_YOUTUBE` / `MAPS_URL` no bloco "EDITE AQUI", no final do `index.html`.
+O vídeo `hv3-trajeto.mp4` (sobrevoo vertical, cerca de 20 MB) já está ligado à página. Para trocar, substitua o arquivo mantendo o mesmo nome ou altere `VIDEO_MP4` / `VIDEO_YOUTUBE` / `MAPS_URL` (botão "Ver localização no mapa") no bloco "EDITE AQUI", no final do `index.html`.
 
 Se for subir pelo navegador do GitHub, cada arquivo pode ter até 25 MB. Mantenha o vídeo abaixo disso.
 
@@ -23,3 +23,7 @@ Se for subir pelo navegador do GitHub, cada arquivo pode ter até 25 MB. Mantenh
 ## Publicação
 
 Settings > Pages > Deploy from a branch > `main` > `/ (root)`. O `index.html` precisa ficar na raiz, não dentro de uma pasta.
+
+## Botão "Ver localização no mapa"
+
+Abre o ponto exato do empreendimento no Google Maps (link definido em `MAPS_URL`, no final do `index.html`). Para trocar, cole outro link de compartilhamento do Google Maps no mesmo campo.

@@ -30,6 +30,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body { font-family: var(--font); background: var(--bg); color: var(--ink); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  [hidden] { display: none !important; }
   img { display: block; max-width: 100%; }
   :focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; }
   .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
@@ -39,18 +40,22 @@
   .lead { color: var(--muted); font-size: 17px; margin-top: 10px; max-width: 56ch; }
 
   /* HERO */
-  .hero { position: relative; min-height: 78svh; display: flex; align-items: flex-end; color: #fff; background: #17261d; overflow: hidden; padding: 0; }
-  .hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 48% center; }
-  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(23,38,29,.35) 0%, rgba(23,38,29,.15) 35%, rgba(23,38,29,.88) 100%); }
-  .hero .wrap { position: relative; z-index: 1; padding-bottom: 40px; padding-top: 80px; }
-  .hero h1 { font-size: clamp(42px, 12vw, 80px); line-height: .98; font-weight: 800; letter-spacing: -0.03em; margin-top: 10px; }
-  .hero p { font-size: 18px; margin-top: 12px; max-width: 34ch; color: rgba(255,255,255,.9); }
-  .hero .eyebrow { color: #cfe79a; }
+  .hero { position: relative; min-height: 68svh; display: flex; align-items: flex-end; color: #fff; background: #17261d; overflow: hidden; padding: 0; }
+  .hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 48% center; filter: saturate(1.05); }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,20,13,.96) 0%, rgba(8,20,13,.88) 34%, rgba(8,20,13,.5) 62%, rgba(8,20,13,.28) 100%); }
+  .hero .wrap { width: 100%; position: relative; z-index: 1; padding-bottom: 40px; padding-top: 80px; }
+  .hero h1 { font-size: clamp(42px, 12vw, 80px); line-height: .98; font-weight: 800; letter-spacing: -0.03em; margin-top: 10px; color: #fff; text-shadow: 0 2px 18px rgba(0,0,0,.55); }
+  .hero p { font-size: 18px; margin-top: 12px; max-width: 34ch; color: #fff; text-shadow: 0 1px 12px rgba(0,0,0,.6); }
+  .hero .eyebrow { color: #e3f3b8; text-shadow: 0 1px 10px rgba(0,0,0,.6); }
 
   .btn { display: inline-flex; align-items: center; gap: 14px; background: var(--wa); color: #05260f; text-decoration: none; padding: 16px 22px; border-radius: 16px; box-shadow: 0 10px 24px rgba(37,211,102,.28); transition: transform .15s ease, background .15s ease; }
   .btn:hover { background: #3be37b; }
   .btn:active { transform: scale(.985); }
-  .btn svg { width: 32px; height: 32px; flex: none; }
+  .btn .av { position: relative; flex: none; width: 50px; height: 50px; }
+  .btn .av img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2.5px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
+  .btn .av i { position: absolute; right: -5px; bottom: -3px; width: 22px; height: 22px; border-radius: 50%; background: #128c4e; color: #fff; display: grid; place-items: center; border: 2px solid var(--wa); }
+  .btn .av i svg { width: 12px; height: 12px; }
+  .btn:has(.av) { padding-top: 12px; padding-bottom: 12px; }
   .btn .txt { display: flex; flex-direction: column; text-align: left; }
   .btn .main { font-size: 17px; font-weight: 800; line-height: 1.15; }
   .btn .sub { font-size: 13px; font-weight: 600; opacity: .8; margin-top: 3px; }
@@ -86,9 +91,11 @@
   .features li::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--lime); transform: translateY(-1px); }
 
   /* GALERIA */
-  .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 26px; }
-  .gallery figure { border-radius: 16px; overflow: hidden; aspect-ratio: 4 / 5; background: #d9d6cd; }
-  .gallery img { width: 100%; height: 100%; object-fit: cover; }
+  .gallery { display: flex; gap: 12px; margin: 22px -20px 0; padding: 0 20px 8px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .gallery::-webkit-scrollbar { display: none; }
+  .gallery figure { flex: none; position: relative; height: clamp(340px, 56svh, 440px); border-radius: 18px; overflow: hidden; scroll-snap-align: center; background: #d9d6cd; cursor: zoom-in; }
+  .gallery img { height: 100%; width: auto; display: block; }
+  .gallery figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 38px 14px 12px; color: #fff; font-weight: 700; font-size: 14px; background: linear-gradient(to top, rgba(8,20,13,.78), rgba(8,20,13,0)); }
 
   /* VÍDEO */
   .video-sec { background: var(--ink); color: #fff; }
@@ -98,14 +105,19 @@
   .link-btn { display: inline-block; margin-top: 18px; color: #fff; font-weight: 700; text-decoration: none; border: 1.5px solid rgba(255,255,255,.4); padding: 12px 18px; border-radius: 12px; }
 
   /* IMPLANTAÇÃO */
-  .plan { margin-top: 26px; background: #000; border-radius: 18px; overflow: hidden; border: 0; padding: 0; width: 100%; cursor: zoom-in; position: relative; display: block; }
-  .plan img { width: 100%; height: auto; }
+  .planrow { display: grid; gap: 22px; }
+  .plan { margin: 0 auto; background: #000; border-radius: 18px; overflow: hidden; border: 0; padding: 0; width: min(100%, 310px); cursor: zoom-in; position: relative; display: block; }
+  .plan img { width: 100%; height: auto; max-height: 460px; object-fit: contain; margin: 0 auto; }
   .plan span { position: absolute; right: 12px; bottom: 12px; background: rgba(255,255,255,.92); color: var(--ink); font: 700 13px var(--font); padding: 8px 12px; border-radius: 999px; }
   .lightbox { position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,.94); display: none; overflow: auto; -webkit-overflow-scrolling: touch; }
   .lightbox.open { display: block; }
   .lightbox img { width: 220%; max-width: none; height: auto; margin: 56px 0 24px; }
   .lightbox button { position: fixed; top: calc(10px + env(safe-area-inset-top, 0px)); right: 12px; z-index: 51; background: #fff; border: 0; border-radius: 999px; padding: 10px 16px; font: 800 14px var(--font); cursor: pointer; }
-  @media (min-width: 760px) { .lightbox img { width: 140%; } }
+  .lightbox.fit { display: none; }
+  .lightbox.fit.open { display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .lightbox.fit img { width: auto; max-width: 94vw; max-height: 84svh; margin: 0; border-radius: 12px; }
+  @media (min-width: 760px) { .lightbox img { width: 140%; } .lightbox.fit img { width: auto; }
+    .planrow { grid-template-columns: 1fr auto; align-items: center; column-gap: 56px; } .plan { margin: 0; width: 380px; } }
 
   /* CONDIÇÕES */
   .cond { display: grid; gap: 12px; margin-top: 26px; }
@@ -168,7 +180,7 @@
     section { padding: 72px 0; }
     .stats { grid-template-columns: repeat(4, 1fr); }
     .features { grid-template-columns: 1fr 1fr; column-gap: 40px; }
-    .gallery { grid-template-columns: repeat(4, 1fr); }
+    .gallery { margin: 22px 0 0; padding: 0 0 8px; justify-content: center; }
     .cond { grid-template-columns: repeat(2, 1fr); }
     .hero { min-height: 82vh; }
     .sticky { left: auto; right: 24px; bottom: 24px; width: auto; padding: 0; background: none; border: 0; backdrop-filter: none; }
@@ -191,7 +203,7 @@
     <h1>Horto Ville III</h1>
     <p>Lançamento exclusivo nos dias 26 e 27 de novembro, para quem estiver cadastrado.</p>
     <a class="btn" data-cta href="#">
-      <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.19 1.6 6.01L4 28l7.14-1.87a12 12 0 0 0 4.9 1.04h.01C22.68 27.17 28 21.77 28 15.13 28 11.92 26.75 8.9 24.5 6.64A11.9 11.9 0 0 0 16.04 3Zm0 21.98h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.73.98 1-3.63-.24-.37a9.9 9.9 0 0 1-1.52-5.33c0-5.5 4.47-9.97 9.97-9.97 2.66 0 5.17 1.04 7.05 2.92a9.9 9.9 0 0 1 2.92 7.06c0 5.5-4.48 9.93-9.94 9.93Zm5.47-7.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
+      <span class="av"><img src="hv3-klebson.jpg" alt="Klebson Souza" width="48" height="48"><i><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.19 1.6 6.01L4 28l7.14-1.87a12 12 0 0 0 4.9 1.04h.01C22.68 27.17 28 21.77 28 15.13 28 11.92 26.75 8.9 24.5 6.64A11.9 11.9 0 0 0 16.04 3Zm0 21.98h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.73.98 1-3.63-.24-.37a9.9 9.9 0 0 1-1.52-5.33c0-5.5 4.47-9.97 9.97-9.97 2.66 0 5.17 1.04 7.05 2.92a9.9 9.9 0 0 1 2.92 7.06c0 5.5-4.48 9.93-9.94 9.93Zm5.47-7.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg></i></span>
       <span class="txt"><span class="main">Quero me cadastrar para o lançamento</span><span class="sub">Exclusivo para cadastrados · 26 e 27 de novembro</span></span>
     </a>
   </div>
@@ -264,11 +276,12 @@
   <div class="wrap">
     <p class="eyebrow">Conheça os espaços</p>
     <h2>Estrutura de lazer</h2>
-    <div class="gallery">
-      <figure><img src="hv3-entrada.jpg" alt="Portal de entrada do Horto Ville III" loading="lazy"></figure>
-      <figure><img src="hv3-playground.jpg" alt="Parque infantil do Horto Ville III" loading="lazy"></figure>
-      <figure><img src="hv3-pets.jpg" alt="Praça pet do Horto Ville III" loading="lazy"></figure>
-      <figure><img src="hv3-esporte.jpg" alt="Quadra de esportes do Horto Ville III" loading="lazy"></figure>
+    <p class="lead">Deslize para o lado e toque na foto para ampliar.</p>
+    <div class="gallery" id="gallery">
+      <figure><img src="hv3-entrada.jpg" alt="Portal de entrada do Horto Ville III" loading="lazy"><figcaption>Portal de entrada</figcaption></figure>
+      <figure><img src="hv3-playground.jpg" alt="Parque infantil do Horto Ville III" loading="lazy"><figcaption>Parque infantil</figcaption></figure>
+      <figure><img src="hv3-pets.jpg" alt="Praça pet do Horto Ville III" loading="lazy"><figcaption>Praça pet</figcaption></figure>
+      <figure><img src="hv3-esporte.jpg" alt="Quadra de esportes do Horto Ville III" loading="lazy"><figcaption>Quadra de esportes</figcaption></figure>
     </div>
   </div>
 </section>
@@ -279,21 +292,24 @@
     <h2>Veja como chegar</h2>
     <p class="lead">Acompanhe, em um sobrevoo, a localização e o trajeto até o Horto Ville III, em Santo Antônio de Jesus.</p>
     <div class="video-box" id="videoBox"></div>
-    <a class="link-btn" id="mapsBtn" href="#" hidden target="_blank" rel="noopener">Abrir no Google Maps</a>
+    <a class="link-btn" id="mapsBtn" href="#" hidden target="_blank" rel="noopener">Ver localização no mapa</a>
   </div>
 </section>
 
 <section>
-  <div class="wrap">
-    <p class="eyebrow">Implantação</p>
-    <h2>Conheça a planta do loteamento</h2>
-    <p class="lead">Toque na imagem para ampliar e ver quadras e lotes.</p>
+  <div class="wrap planrow">
+    <div class="plantxt">
+      <p class="eyebrow">Implantação</p>
+      <h2>Conheça a planta do loteamento</h2>
+      <p class="lead">Veja a distribuição das quadras, ruas e lotes. Toque na planta para ampliar.</p>
+    </div>
     <button class="plan" id="planBtn" type="button" aria-label="Ampliar a planta do loteamento">
       <img src="hv3-implantacao.jpg" alt="Planta de implantação do Horto Ville III com quadras e lotes" loading="lazy">
       <span>Ampliar</span>
     </button>
   </div>
 </section>
+
 
 <section style="padding-top:0" id="condicoes">
   <div class="wrap">
@@ -403,7 +419,7 @@
       </div>
     </div>
     <a class="btn" data-cta href="#">
-      <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.19 1.6 6.01L4 28l7.14-1.87a12 12 0 0 0 4.9 1.04h.01C22.68 27.17 28 21.77 28 15.13 28 11.92 26.75 8.9 24.5 6.64A11.9 11.9 0 0 0 16.04 3Zm0 21.98h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.73.98 1-3.63-.24-.37a9.9 9.9 0 0 1-1.52-5.33c0-5.5 4.47-9.97 9.97-9.97 2.66 0 5.17 1.04 7.05 2.92a9.9 9.9 0 0 1 2.92 7.06c0 5.5-4.48 9.93-9.94 9.93Zm5.47-7.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
+      <span class="av"><img src="hv3-klebson.jpg" alt="Klebson Souza" width="48" height="48"><i><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.19 1.6 6.01L4 28l7.14-1.87a12 12 0 0 0 4.9 1.04h.01C22.68 27.17 28 21.77 28 15.13 28 11.92 26.75 8.9 24.5 6.64A11.9 11.9 0 0 0 16.04 3Zm0 21.98h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.73.98 1-3.63-.24-.37a9.9 9.9 0 0 1-1.52-5.33c0-5.5 4.47-9.97 9.97-9.97 2.66 0 5.17 1.04 7.05 2.92a9.9 9.9 0 0 1 2.92 7.06c0 5.5-4.48 9.93-9.94 9.93Zm5.47-7.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg></i></span>
       <span class="txt"><span class="main">Quero me cadastrar para o lançamento</span><span class="sub">Cadastro rápido pelo WhatsApp</span></span>
     </a>
   </div>
@@ -419,14 +435,14 @@
 
 <div class="sticky" id="sticky">
   <a class="btn" data-cta href="#">
-    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.19 1.6 6.01L4 28l7.14-1.87a12 12 0 0 0 4.9 1.04h.01C22.68 27.17 28 21.77 28 15.13 28 11.92 26.75 8.9 24.5 6.64A11.9 11.9 0 0 0 16.04 3Zm0 21.98h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.73.98 1-3.63-.24-.37a9.9 9.9 0 0 1-1.52-5.33c0-5.5 4.47-9.97 9.97-9.97 2.66 0 5.17 1.04 7.05 2.92a9.9 9.9 0 0 1 2.92 7.06c0 5.5-4.48 9.93-9.94 9.93Zm5.47-7.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
+    <span class="av"><img src="hv3-klebson.jpg" alt="Klebson Souza" width="48" height="48"><i><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.19 1.6 6.01L4 28l7.14-1.87a12 12 0 0 0 4.9 1.04h.01C22.68 27.17 28 21.77 28 15.13 28 11.92 26.75 8.9 24.5 6.64A11.9 11.9 0 0 0 16.04 3Zm0 21.98h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.73.98 1-3.63-.24-.37a9.9 9.9 0 0 1-1.52-5.33c0-5.5 4.47-9.97 9.97-9.97 2.66 0 5.17 1.04 7.05 2.92a9.9 9.9 0 0 1 2.92 7.06c0 5.5-4.48 9.93-9.94 9.93Zm5.47-7.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg></i></span>
     <span class="txt"><span class="main">Cadastrar para o lançamento</span></span>
   </a>
 </div>
 
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Planta ampliada">
   <button type="button" id="lbClose">Fechar</button>
-  <img src="hv3-implantacao.jpg" alt="Planta de implantação ampliada">
+  <img id="lbImg" src="hv3-implantacao.jpg" alt="Planta de implantação ampliada">
 </div>
 
 <script>
@@ -437,7 +453,7 @@
   // Vídeo de localização e trajeto: preencha UM dos dois.
   var VIDEO_MP4 = "hv3-trajeto.mp4";   // vídeo do trajeto (arquivo enviado junto com o site)
   var VIDEO_YOUTUBE = "";    // ex.: "dQw4w9WgXcQ" (somente o código do vídeo)
-  var MAPS_URL = "";         // link do Google Maps do empreendimento (opcional)
+  var MAPS_URL = "https://maps.app.goo.gl/7pmjNBvh3eshww4R8";   // ponto exato do empreendimento
   // ========================
 
   // Botões do WhatsApp
@@ -456,11 +472,18 @@
     box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + VIDEO_YOUTUBE + '?rel=0" title="Localização e trajeto até o Horto Ville III" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>';
     sec.hidden = false;
   }
-  if (MAPS_URL && !sec.hidden) { var m = document.getElementById("mapsBtn"); m.href = MAPS_URL; m.hidden = false; }
+  if (/^https?:\/\//.test(MAPS_URL)) { var m = document.getElementById("mapsBtn"); m.href = MAPS_URL; m.hidden = false; }
 
   // Planta ampliada
   var lb = document.getElementById("lightbox");
-  document.getElementById("planBtn").addEventListener("click", function () { lb.classList.add("open"); lb.scrollTop = 0; });
+  var lbImg = document.getElementById("lbImg");
+  document.getElementById("planBtn").addEventListener("click", function () {
+    lbImg.src = "hv3-implantacao.jpg"; lb.classList.remove("fit"); lb.classList.add("open"); lb.scrollTop = 0;
+  });
+  document.querySelectorAll("#gallery img").forEach(function (im) {
+    im.addEventListener("click", function () { lbImg.src = im.getAttribute("src"); lb.classList.add("fit", "open"); });
+  });
+  lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
   function closeLb() { lb.classList.remove("open"); }
   document.getElementById("lbClose").addEventListener("click", closeLb);
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
